@@ -1,6 +1,26 @@
-﻿static void ResultValuePrint(int number1, int number2, int result)
+﻿static string placeholderToAction(string action)
 {
-    Console.WriteLine("O valor de " + number1 +  " e " + number2 + " deu:" + result);
+    switch (action)
+    {
+        //case "E":
+        //    action = "Saída";
+        //    break;
+        case "A":
+            action = "+";
+            break;
+        case "S":
+            action = "-";
+            break;
+        case "M":
+            action = "*";
+            break;
+    }
+
+    return action;
+}
+static void ResultValuePrint(int number1, int number2, string action, int result)
+{
+    Console.WriteLine("O valor de " + number1 + placeholderToAction(action) + number2 + " deu:" + result);
 }
 static int IntParser(string data)
 {
@@ -51,6 +71,7 @@ else {
 ResultValuePrint(
     calculator.GetNumber1(),
     calculator.GetNumber2(),
+    action,
     result
 );
 Console.ReadLine();
