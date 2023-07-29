@@ -11,6 +11,16 @@ namespace Calculator
             this.number1 = number1;
             this.number2 = number2;
         }
+
+        public int GetNumber1()
+        {
+            return this.number1;
+        }
+
+        public int GetNumber2()
+        {
+            return this.number2;
+        }
 		public int Add()
 		{
 			return this.number1 + this.number2;

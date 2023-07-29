@@ -1,12 +1,14 @@
-﻿static void ResultValuePrint(int value)
+﻿static void ResultValuePrint(int number1, int number2, int result)
 {
-    Console.WriteLine("O valor deu:" + value);
+    Console.WriteLine("O valor de" + number1 +  "e" + number2 + "deu:" + result);
 }
 static int intParser(string data)
 {
-    if (int.TryParse(data, out int number))
+    int _;
+    if (int.TryParse(data, out _))
     {
-        return int.Parse(data);
+        _ = int.Parse(data);
+        return _;
     }
     return 0;
 }
@@ -43,4 +45,8 @@ else {
     result = 0;
 }
 
-ResultValuePrint(result);
+ResultValuePrint(
+    calculator.GetNumber1(),
+    calculator.GetNumber2(),
+    result
+);
