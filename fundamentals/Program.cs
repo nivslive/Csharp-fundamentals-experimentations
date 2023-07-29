@@ -19,7 +19,7 @@ Console.WriteLine("[E]xit!!");
 
 
 string userChoice = Console.ReadLine() ?? "";
-
+int userChoiceIfANumber = int.Parse(userChoice);
 if (userChoice == "S")
 {
     PrintSelectionOption(userChoice);
