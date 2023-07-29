@@ -2,7 +2,7 @@
 {
     Console.WriteLine("O valor de " + number1 +  " e " + number2 + " deu:" + result);
 }
-static int intParser(string data)
+static int IntParser(string data)
 {
     int _;
     if (int.TryParse(data, out _))
@@ -13,9 +13,9 @@ static int intParser(string data)
     return 0;
 }
 Console.WriteLine("Input the first number:");
-int number1 = intParser(Console.ReadLine() ?? "");
+int number1 = IntParser(Console.ReadLine() ?? "");
 Console.WriteLine("Input the second number:");
-int number2 = intParser(Console.ReadLine() ?? "");
+int number2 = IntParser(Console.ReadLine() ?? "");
 
 Calculator.Functions calculator = new(number1, number2);
 
