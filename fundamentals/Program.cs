@@ -5,10 +5,6 @@ Console.WriteLine("[R]emove a TODO!");
 Console.WriteLine("[E]xit!!");
 
 string userChoice = Console.ReadLine() ?? "";
-bool isUserInputABC =
-    userChoice == "ABC" ||
-    userChoice == "test" ||
-    userChoice == "banana";
 if (userChoice.Length > 10)
 {
     Console.WriteLine("IS ABC!");
