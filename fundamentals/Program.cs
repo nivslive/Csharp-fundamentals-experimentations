@@ -1,7 +1,7 @@
 ﻿using fundamentals;
 
 string text = "oi";
-"""//NumberExperimentations numberClass = new();
+//NumberExperimentations numberClass = new();
 NumberExperimentations.AddNumberTestIfAboveThanTen(10, 5);
 NumberExperimentations.IsLong(text);
 
