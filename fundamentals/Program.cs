@@ -19,7 +19,15 @@ Console.WriteLine("[E]xit!!");
 
 
 string userChoice = Console.ReadLine() ?? "";
-int userChoiceIfANumber = int.Parse(userChoice);
+int userChoiceIfANumber;
+if(int.TryParse(userChoice, out userChoiceIfANumber))
+{
+   userChoiceIfANumber = int.Parse(userChoice);
+} else
+{
+    userChoiceIfANumber = 0;
+}
+
 if (userChoice == "S")
 {
     PrintSelectionOption(userChoice);
@@ -40,5 +48,5 @@ if (userChoice == "E")
     PrintSelectionOption(userChoice);
 }
 
-//Console.WriteLine("User input:" + userChoice);
+Console.WriteLine("User input:" + (userChoiceIfANumber == 0 ? userChoice.GetType() : userChoiceIfANumber.GetType()) + " " + userChoiceIfANumber ?? userChoice);
 Console.ReadKey();
