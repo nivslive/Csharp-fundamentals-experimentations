@@ -1,4 +1,11 @@
-﻿void PrintSelectionOption(string selectedOption)
+﻿using fundamentals;
+
+string text = "oi";
+"""//NumberExperimentations numberClass = new();
+NumberExperimentations.AddNumberTestIfAboveThanTen(10, 5);
+NumberExperimentations.IsLong(text);
+
+void PrintSelectionOption(string selectedOption)
 {
     Console.WriteLine("Selected option:" + selectedOption);
 }
