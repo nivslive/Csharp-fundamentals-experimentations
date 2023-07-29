@@ -5,7 +5,7 @@ Console.WriteLine("[R]emove a TODO!");
 Console.WriteLine("[E]xit!!");
 
 string userChoice = Console.ReadLine() ?? "";
-if (userChoice.Length > 10)
+if (userChoice.Length > 11)
 {
     Console.WriteLine("IS ABC!");
 }
