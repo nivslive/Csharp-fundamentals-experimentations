@@ -35,39 +35,42 @@ static int IntParser(string data)
     return 0;
 }
 Calculator.Functions calculator = new();
+
+// first number
 Console.WriteLine("Input the first number:");
 int number1 = IntParser(Console.ReadLine() ?? "");
 calculator.SetNumber1(number1);
+
 Console.WriteLine("Input the second number:");
 int number2 = IntParser(Console.ReadLine() ?? "");
 calculator.SetNumber2(number2);
 
-
+// interface
 Console.WriteLine("What do you want to do?");
 Console.WriteLine("[A]dd Numbers!");
 Console.WriteLine("[S]ubtract Numbers!");
 Console.WriteLine("[M]ultiply Numbers!");
+
+
+// the user action
 string actionResult = Console.ReadLine() ?? "E";
 string action = actionResult.ToUpper();
+
 int result;
-if(action == "A")
-{
-    result = calculator.Add();
-}
-else if (action == "M")
-{
-    result = calculator.Mult();
-}
-else if (action == "S")
-{
-    result = calculator.Sub();
-}
-else if (action == "E")
-{
-    result = 0;
-}
-else {
-    result = 0;
+
+switch(action) {
+    case "A":
+        result = calculator.Add();
+        break;
+    case "M":
+        result = calculator.Mult();
+        break;
+    case "S":
+        result = calculator.Sub();
+        break;
+    default:
+        result = 0;
+        break;
 }
 
 ResultValuePrint(
