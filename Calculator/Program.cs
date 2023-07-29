@@ -1,6 +1,6 @@
 ﻿static void ResultValuePrint(int number1, int number2, int result)
 {
-    Console.WriteLine("O valor de" + number1 +  "e" + number2 + "deu:" + result);
+    Console.WriteLine("O valor de " + number1 +  " e " + number2 + " deu:" + result);
 }
 static int intParser(string data)
 {
@@ -23,7 +23,8 @@ Console.WriteLine("What do you want to do?");
 Console.WriteLine("[A]dd Numbers!");
 Console.WriteLine("[S]ubtract Numbers!");
 Console.WriteLine("[M]ultiply Numbers!");
-string action = Console.ReadLine() ?? "E";
+string actionResult = Console.ReadLine() ?? "E";
+string action = actionResult.ToUpper();
 int result;
 if(action == "A")
 {
@@ -50,3 +51,4 @@ ResultValuePrint(
     calculator.GetNumber2(),
     result
 );
+Console.ReadLine();
