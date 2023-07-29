@@ -6,11 +6,11 @@ namespace Calculator
         int number1;
         int number2;
 
-        public Functions(int number1, int number2)
-        {
-            this.number1 = number1;
-            this.number2 = number2;
-        }
+        //public Functions(int number1, int number2)
+        //{
+        //    this.number1 = number1;
+        //    this.number2 = number2;
+        //}
 
         public void SetNumber1(int number)
         {

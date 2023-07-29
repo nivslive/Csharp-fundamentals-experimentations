@@ -12,12 +12,14 @@ static int IntParser(string data)
     }
     return 0;
 }
+Calculator.Functions calculator = new();
 Console.WriteLine("Input the first number:");
 int number1 = IntParser(Console.ReadLine() ?? "");
+calculator.SetNumber1(number1);
 Console.WriteLine("Input the second number:");
 int number2 = IntParser(Console.ReadLine() ?? "");
+calculator.SetNumber2(number2);
 
-Calculator.Functions calculator = new(number1, number2);
 
 Console.WriteLine("What do you want to do?");
 Console.WriteLine("[A]dd Numbers!");
