@@ -20,8 +20,10 @@
 }
 static void ResultValuePrint(int number1, int number2, string action, int result)
 {
-    Console.WriteLine("O valor de " + number1 + placeholderToAction(action) + number2 + " deu:" + result);
+    Console.WriteLine(
+        $"O valor de {number1} {placeholderToAction(action)} {number2} deu: {result}");
 }
+
 static int IntParser(string data)
 {
     int _;
