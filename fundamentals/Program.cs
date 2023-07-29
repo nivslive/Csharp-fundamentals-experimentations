@@ -5,9 +5,18 @@ Console.WriteLine("[R]emove a TODO!");
 Console.WriteLine("[E]xit!!");
 
 string userChoice = Console.ReadLine() ?? "";
-if (userChoice.Length > 11)
+
+if (userChoice.Length >= 3)
 {
-    Console.WriteLine("IS ABC!");
+    Console.WriteLine("Short Answer!");
 }
+else if (userChoice.Length < 10)
+{
+    Console.WriteLine("Medium Answer");
+}
+else {
+    Console.WriteLine("Short answer.");
+}
+
 Console.WriteLine("User input:" + userChoice);
 Console.ReadKey();
